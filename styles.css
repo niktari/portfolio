@@ -109,6 +109,7 @@ body {
   font-size: clamp(16px, 1.4vw, 20px);
   margin: 5px 20px;
   overflow-y: scroll;
+  line-height: 1.35;
 }
 
 ::selection {
@@ -119,19 +120,19 @@ h1,
 h2 {
   font-family: authentic;
   font-size: 1.3em;
-  line-height: 1.35;
   margin-bottom: 1.1em;
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #262f2eaf;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
 
-p {
-  line-height: 1.35;
+p,
+ul {
+  font-size: 1em;
 }
 
 h1 a {
@@ -166,6 +167,7 @@ b {
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 1em;
+  margin-top: 1em;
 }
 
 #bio {
@@ -212,6 +214,7 @@ b {
   color: #262f2e;
   text-transform: uppercase;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .prototype span {
@@ -223,12 +226,12 @@ b {
 .ellipses {
   border: 1px solid #000000;
   padding: 8px 16px 5px 18px;
-  /* padding: 0.3em 0.75em 0.3em 0.9em; */
   border-radius: 10px;
   color: #262f2e;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .ellipses span {
@@ -241,14 +244,12 @@ b {
 }
 
 #more-bio {
-  display: inline-block;
-  padding: 6px 16px 2px 18px;
+  padding: 6px 16px 3px 18px;
   transform: translate(0, -5px);
 }
 
 #less-bio {
-  font-weight: normal;
-  padding: 6px 13px 2px 15px;
+  padding: 7px 10px 2px 12px;
   transform: translate(0, -5px);
 }
 
@@ -258,8 +259,10 @@ b {
 }
 
 .less {
+  font-weight: normal;
   padding: 8px 9px 5px 11px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .contact a:hover,
@@ -328,6 +331,16 @@ b {
   display: none;
 }
 
+#under-construction {
+  padding: 0.5em;
+}
+
+#under-construction a {
+  text-decoration: none;
+  color: #262f2e;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
   .contact {
     flex-direction: column;
@@ -335,6 +348,7 @@ b {
 
   .contact a {
     margin-right: 0;
+    margin-top: 0;
     margin-bottom: 0.5em;
   }
 }
@@ -348,7 +362,6 @@ b {
     max-width: calc(100vw - 1em);
     box-sizing: border-box;
     height: auto;
-    margin-bottom: 20px;
   }
 
   .work {
@@ -358,7 +371,7 @@ b {
   }
 
   .contact {
-    margin-top: 2em;
+    margin-top: 20px;
     flex-direction: row;
   }
 
@@ -379,7 +392,7 @@ b {
 
   .ellipses,
   #more-bio {
-    padding-left: 15px;
+    padding-left: 18px;
   }
 
   .less {
@@ -393,23 +406,18 @@ b {
   }
 
   #less-bio {
-    padding: 5px 13px 3px 15px;
+    padding: 5px 12px 3px 12px;
   }
-}
-
-#under-construction {
-  padding: 0.5em;
-}
-
-#under-construction a {
-  text-decoration: none;
-  color: #262f2e;
-  font-weight: bold;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   body {
     font-size: 14px;
+  }
+
+  p,
+  ul {
+    font-size: 1.1em;
   }
 
   .info-wrapper {
@@ -426,5 +434,45 @@ b {
   .side-info {
     display: flex;
     justify-content: space-between;
+  }
+
+  .prototype,
+  .ellipses,
+  .less {
+    font-size: 12px;
+  }
+
+  .prototype,
+  .ellipses,
+  .contact a {
+    border-radius: 8px;
+  }
+
+  .prototype span {
+    font-size: 14px;
+  }
+
+  .prototype {
+    padding: 7px 7px 5px 11px;
+  }
+
+  .ellipses {
+    padding: 7px 10px 5px 12px;
+  }
+
+  #more-bio {
+    padding: 4px 10px 2px 12px;
+  }
+
+  #less-bio {
+    padding: 5px 9px 3px 11px;
+  }
+
+  .less {
+    padding: 7px 9px 5px 11px;
+  }
+
+  .contact a {
+    padding: 6px 10px 3px 10px;
   }
 }
