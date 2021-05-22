@@ -1,0 +1,354 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* GLOBAL */
+
+body {
+  background-color: #cecac5;
+  margin: 10px;
+  font-family: din-2014, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #282828;
+}
+
+.reverse-body {
+  background-color: #ec4513;
+  color: #282828;
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  width: 72vw;
+  margin-top: 30vh;
+  margin-left: calc(100vw / 2 - 72vw / 2);
+}
+
+.letter {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 5px;
+}
+
+/* INPUTS */
+
+#controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 300px;
+  height: 3px;
+  background-color: #f1f1f1;
+  border-radius: 1px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+
+input[type="button"] {
+  background-color: #f1f1f1;
+  border: none;
+  color: #1d1d1d;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: din-2014, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* LETTER W */
+
+.letter.w {
+  width: 14vw;
+  height: 11vw;
+}
+
+.letter.w .blank {
+  width: 4.16%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.w .cell {
+  width: 4.16%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER H */
+
+.letter.h {
+  width: 6vw;
+  height: 11vw;
+}
+
+.letter.h .blank {
+  width: 10%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.h .cell {
+  width: 10%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER I */
+
+.letter.i {
+  width: 2.5vw;
+  height: 11vw;
+}
+
+.letter.i .blank {
+  width: 25%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.i .cell {
+  width: 25%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER T */
+
+.letter.t {
+  width: 3.6vw;
+  height: 11vw;
+}
+
+.letter.t .blank {
+  width: 16.67%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.t .cell {
+  width: 16.67%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER E */
+
+.letter.e {
+  width: 5.5vw;
+  height: 11vw;
+}
+
+.letter.e .blank {
+  width: 11%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.e .cell {
+  width: 11%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER C */
+
+.letter.c {
+  width: 5.5vw;
+  height: 11vw;
+}
+
+.letter.c .blank {
+  width: 11%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.c .cell {
+  width: 11%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER A */
+
+.letter.a {
+  width: 5.7vw;
+  height: 11vw;
+  margin-right: 1px;
+}
+
+.letter.a .blank {
+  width: 10%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.a .cell {
+  width: 10%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER P */
+
+.letter.p {
+  width: 6.5vw;
+  height: 11vw;
+  margin-left: 1px;
+}
+
+.letter.p .blank {
+  width: 9.09%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.p .cell {
+  width: 9.09%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
+
+/* LETTER L */
+
+.letter.l {
+  width: 3.2vw;
+  height: 11vw;
+}
+
+.letter.l .blank {
+  width: 20%;
+  height: 5.88%;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.letter.l .cell {
+  width: 20%;
+  height: 5.88%;
+  background-color: #ec4513;
+}
