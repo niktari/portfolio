@@ -244,7 +244,6 @@ b {
   display: inline-block;
   padding: 6px 16px 2px 18px;
   transform: translate(0, -5px);
-  /* transform: translate(340px, -65px); */
 }
 
 #less-bio {
@@ -330,10 +329,6 @@ b {
 }
 
 @media screen and (max-width: 1024px) {
-  /* body {
-    background-color: green;
-  } */
-
   .contact {
     flex-direction: column;
   }
@@ -345,13 +340,12 @@ b {
 }
 
 @media screen and (max-width: 768px) {
-  /* body {
-    background-color: blue;
-  } */
-
+  body {
+    margin: 0;
+  }
   #bio {
     position: relative;
-    max-width: 100%;
+    max-width: calc(100vw - 1em);
     box-sizing: border-box;
     height: auto;
     margin-bottom: 20px;
@@ -411,4 +405,10 @@ b {
   text-decoration: none;
   color: #262f2e;
   font-weight: bold;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 }

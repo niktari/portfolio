@@ -35,15 +35,6 @@ var swiper = new Swiper(".mySwiper", {
 
             bio_extended[i].style.display= 'inline-block';
             bio_more.style.display = 'none';
-              
-             
-            //   if(bio_extended[i].style.display == 'inline-block'){
-            //   bio_extended[i].style.display= 'none';
-            //   } else{
-            //       bio_extended[i].style.display= 'inline-block';
-            //       bio_more.style.display = 'none';
-            //   }
-              
       
           }
       
