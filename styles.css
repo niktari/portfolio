@@ -341,7 +341,7 @@ b {
 
 @media screen and (max-width: 768px) {
   body {
-    margin: 0;
+    margin: 0px 3px;
   }
   #bio {
     position: relative;
@@ -410,5 +410,21 @@ b {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   body {
     font-size: 14px;
+  }
+
+  .info-wrapper {
+    grid-template-columns: 0;
+    grid-gap: 0;
+    flex-direction: column;
+  }
+
+  .about {
+    grid-column: 0;
+    grid-row: 0;
+  }
+
+  .side-info {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -12,23 +12,6 @@ var swiper = new Swiper(".mySwiper", {
       let bio_less = document.getElementById("less-bio");
       let bio_extended = document.getElementsByClassName("bio-ext");
       
-      for (let i = 0; i < $(".info").length; i++) {
-      
-          $(".info")[i].onclick = function() {
-             
-              if($('.info-wrapper')[i].style.display == 'grid'){
-                  $('.info-wrapper')[i].style.display = 'none';
-                  $(this).removeClass('less');
-                  $(this).html('<span></span><span></span><span></span>');
-              } else{
-                  $('.info-wrapper')[i].style.display = 'grid';
-                  $(this).addClass('less').text('Less');
-              }
-              
-          }
-      
-      }
-      
       bio_more.onclick = function() {
       
           for (let i = 0; i < bio_extended.length; i++) {
@@ -51,3 +34,46 @@ var swiper = new Swiper(".mySwiper", {
         
             }
       
+// media queries
+
+function mobileQuery(x) {
+  if (x.matches) { // If media query matches
+    for (let i = 0; i < $(".info").length; i++) {
+      
+      $(".info")[i].onclick = function() {
+         
+          if($('.info-wrapper')[i].style.display == 'flex'){
+              $('.info-wrapper')[i].style.display = 'none';
+              $(this).removeClass('less');
+              $(this).html('<span></span><span></span><span></span>');
+          } else{
+              $('.info-wrapper')[i].style.display = 'flex';
+              $(this).addClass('less').text('Less');
+          }
+          
+      }
+  
+  }
+  } else {
+    for (let i = 0; i < $(".info").length; i++) {
+      
+      $(".info")[i].onclick = function() {
+         
+          if($('.info-wrapper')[i].style.display == 'grid'){
+              $('.info-wrapper')[i].style.display = 'none';
+              $(this).removeClass('less');
+              $(this).html('<span></span><span></span><span></span>');
+          } else{
+              $('.info-wrapper')[i].style.display = 'grid';
+              $(this).addClass('less').text('Less');
+          }
+          
+      }
+  
+  }
+  }
+}
+
+var x = window.matchMedia("(min-device-width: 320px) and (max-device-width: 480px)")
+mobileQuery(x) // call listener function at run time
+x.addListener(mobileQuery) // attach listener function on state changes
