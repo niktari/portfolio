@@ -323,11 +323,22 @@ b {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #fff !important;
+  background-repeat: no-repeat;
+  background-size: 0.7em auto;
 }
 
-#of-next,
-#of-prev {
+.swiper-button-next {
+  background-image: url(images/next-v2.svg);
+  background-position: right;
+}
+
+.swiper-button-prev {
+  background-image: url(images/prev-v2.svg);
+  background-position: left;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
   display: none;
 }
 
@@ -420,6 +431,11 @@ b {
     font-size: 1.1em;
   }
 
+  /* .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  } */
+
   .info-wrapper {
     grid-template-columns: 0;
     grid-gap: 0;
@@ -473,6 +489,7 @@ b {
   }
 
   .contact a {
+    margin-bottom: 3em;
     padding: 6px 10px 3px 10px;
   }
 }

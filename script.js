@@ -5,6 +5,10 @@ var swiper = new Swiper(".mySwiper", {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: true,
+        },
       });
 
 
@@ -38,6 +42,7 @@ var swiper = new Swiper(".mySwiper", {
 
 function mobileQuery(x) {
   if (x.matches) { // If media query matches
+
     for (let i = 0; i < $(".info").length; i++) {
       
       $(".info")[i].onclick = function() {
@@ -54,6 +59,7 @@ function mobileQuery(x) {
       }
   
   }
+
   } else {
     for (let i = 0; i < $(".info").length; i++) {
       
