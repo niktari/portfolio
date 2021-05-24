@@ -135,17 +135,20 @@ ul {
   font-size: 1em;
 }
 
-h1 a {
-  display: inline-block;
+h1 a,
+p a,
+#under-construction a {
   color: #262f2e;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
+  border-bottom: 2px solid #000;
 }
 
-h1 a:hover,
-#under-construction a:hover {
+#spicy:hover,
+#under-construction a:hover,
+p a:hover {
   color: #ef4b25;
-  /* background-color: #8c8c8c; */
+  border-bottom: 2px solid #ef4b25;
 }
 
 b {
@@ -154,7 +157,6 @@ b {
 }
 
 .contact {
-  /* background-color: pink; */
   display: flex;
 }
 
@@ -186,7 +188,6 @@ b {
   max-width: calc(60% - 20px);
   margin-bottom: 0.75em;
   overflow-x: hidden;
-  /* background-color: blue; */
 }
 
 .title-wrapper h2 {
@@ -203,9 +204,19 @@ b {
   content: "";
 }
 
+#whitechapel-process img {
+  display: none;
+}
+
+#whitechapel-process:hover img {
+  position: absolute;
+  display: block;
+  width: 50%;
+  transform: translate(10%, -125%);
+}
+
 .prototype {
   border: 1px solid #000000;
-  /* padding: 0.5em 0.8em 0.35em 1.2em; */
   padding: 8px 10px 5px 14px;
   border-radius: 10px;
   margin-top: 10px;
@@ -244,11 +255,13 @@ b {
 }
 
 #more-bio {
+  display: inline-block;
   padding: 6px 16px 3px 18px;
   transform: translate(0, -5px);
 }
 
 #less-bio {
+  display: inline-block;
   padding: 7px 10px 2px 12px;
   transform: translate(0, -5px);
 }
@@ -344,12 +357,6 @@ b {
 
 #under-construction {
   padding: 0.5em;
-}
-
-#under-construction a {
-  text-decoration: none;
-  color: #262f2e;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 1024px) {
