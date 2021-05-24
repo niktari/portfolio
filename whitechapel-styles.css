@@ -352,3 +352,23 @@ input[type="button"] {
   height: 5.88%;
   background-color: #ec4513;
 }
+
+/* MOBILE */
+
+#mobile-message {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: none;
+  }
+
+  #controls {
+    display: none;
+  }
+
+  #mobile-message {
+    display: block;
+  }
+}
