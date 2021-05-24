@@ -144,7 +144,7 @@ p a,
   border-bottom: 2px solid #000;
 }
 
-#spicy:hover,
+.bio-link:hover,
 #under-construction a:hover,
 p a:hover {
   color: #ef4b25;
