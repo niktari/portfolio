@@ -106,8 +106,8 @@ body {
   color: #262f2e;
   font-family: authentic;
   font-weight: normal;
-  font-size: clamp(16px, 1.4vw, 20px);
-  margin: 5px 20px;
+  font-size: clamp(16px, 1.5vw, 20px);
+  margin: 5px;
   overflow-y: scroll;
   line-height: 1.35;
 }
@@ -140,7 +140,6 @@ p a,
 #under-construction a {
   color: #262f2e;
   text-decoration: none;
-  /* font-weight: bold; */
   border-bottom: 2px solid #000;
 }
 
@@ -359,26 +358,10 @@ b {
   padding: 0.5em;
 }
 
-@media screen and (max-width: 1024px) {
-  .contact {
-    flex-direction: column;
-  }
-
-  .contact a {
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    margin: 0px 3px;
-  }
+@media screen and (max-width: 1000px) {
   #bio {
     position: relative;
     max-width: calc(100vw - 1em);
-    box-sizing: border-box;
     height: auto;
   }
 
@@ -428,9 +411,10 @@ b {
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
   body {
     font-size: 14px;
+    margin: 2.5px;
   }
 
   p,
@@ -438,10 +422,10 @@ b {
     font-size: 1.1em;
   }
 
-  /* .swiper-button-next,
+  .swiper-button-next,
   .swiper-button-prev {
     display: none;
-  } */
+  }
 
   .info-wrapper {
     grid-template-columns: 0;
