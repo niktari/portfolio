@@ -5,19 +5,25 @@
   font-style: normal;
 }
 
+:root {
+  --acccent-color: #ef4b25;
+  --custom-black: #262f2e;
+  --custom-grey: #262f2eaf;
+}
+
 body {
   background-color: #e8e2dd;
-  color: #262f2e;
+  color: var(--custom-black);
   font-family: authentic;
   font-weight: normal;
-  font-size: clamp(16px, 1.5vw, 20px);
-  margin: 5px;
+  font-size: clamp(16px, 1.35vw, 20px);
+  margin: 5px 10px;
   overflow-y: scroll;
   line-height: 1.35;
 }
 
 ::selection {
-  background: #ef4b25;
+  background: var(--acccent-color);
 }
 
 h1,
@@ -30,7 +36,7 @@ h2 {
 
 h3 {
   font-size: 0.8em;
-  color: #262f2eaf;
+  color: var(--custom-grey);
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -53,14 +59,14 @@ p a,
 }
 
 .main:hover {
-  color: #ef4b25;
+  color: var(--acccent-color);
 }
 
-.bio-link:hover,
+h1 a:hover:not(.ellipses),
 #under-construction a:hover,
 p a:hover {
-  color: #ef4b25;
-  border-bottom: 2px solid #ef4b25;
+  color: var(--acccent-color);
+  border-bottom: 2px solid var(--acccent-color);
 }
 
 .contact {
@@ -79,7 +85,7 @@ p a:hover {
   margin-top: 1em;
 }
 
-#bio {
+.bio {
   position: fixed;
   padding: 0.5em;
   padding-bottom: 1.5em;
@@ -159,7 +165,7 @@ p a:hover {
   height: 4px;
   width: 4px;
   border-radius: 50%;
-  background-color: #262f2e;
+  background-color: var(--custom-black);
 }
 
 #more-bio {
@@ -268,7 +274,7 @@ p a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  #bio {
+  .bio {
     position: relative;
     max-width: calc(100vw - 1em);
     height: auto;
@@ -318,6 +324,26 @@ p a:hover {
   #less-bio {
     padding: 5px 12px 3px 12px;
   }
+}
+
+/* SKETCHBOOK */
+
+#sketches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#sketches img {
+  width: 100%;
+}
+
+.sketch {
+  margin-bottom: 30px;
+}
+
+.library {
+  color: var(--custom-grey);
 }
 
 @media only screen and (max-device-width: 480px) {
