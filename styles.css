@@ -9,6 +9,7 @@
   --acccent-color: #ef4b25;
   --custom-black: #262f2e;
   --custom-grey: #262f2eaf;
+  --custom-beige: #8c8c8c;
 }
 
 body {
@@ -49,7 +50,7 @@ ul {
 h1 a,
 p a,
 #under-construction a {
-  color: #262f2e;
+  color: var(--custom-black);
   text-decoration: none;
   border-bottom: 2px solid #000;
 }
@@ -195,7 +196,7 @@ p a:hover {
 .contact a:hover,
 .prototype:hover,
 .ellipses:hover {
-  background-color: #8c8c8c;
+  background-color: var(--custom-beige);
 }
 
 .info-wrapper {
@@ -326,6 +327,11 @@ p a:hover {
   }
 }
 
+footer {
+  color: var(--custom-grey);
+  padding: 0.5em;
+}
+
 /* SKETCHBOOK */
 
 #sketches {
@@ -334,7 +340,8 @@ p a:hover {
   justify-content: space-between;
 }
 
-#sketches img {
+#sketches img,
+#sketches video {
   width: 100%;
 }
 
@@ -349,7 +356,7 @@ p a:hover {
 @media only screen and (max-device-width: 480px) {
   body {
     font-size: 14px;
-    margin: 2.5px;
+    margin: 5px 2.5px;
   }
 
   p,
@@ -417,5 +424,9 @@ p a:hover {
   .contact a {
     margin-bottom: 3em;
     padding: 6px 10px 3px 10px;
+  }
+
+  footer {
+    padding-top: 1.5em;
   }
 }
