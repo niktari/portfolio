@@ -6,6 +6,7 @@
 }
 
 :root {
+  --background-color: #e3e0de;
   --acccent-color: #ef4b25;
   --custom-black: #262f2e;
   --custom-grey: #262f2eaf;
@@ -13,7 +14,7 @@
 }
 
 body {
-  background-color: #e8e2dd;
+  background-color: var(--background-color);
   color: var(--custom-black);
   font-family: authentic;
   font-weight: normal;
