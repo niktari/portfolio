@@ -275,6 +275,30 @@ p a:hover {
   padding: 0.5em;
 }
 
+/* SKETCHBOOK */
+
+#sketches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#sketches img,
+#sketches video {
+  width: 100%;
+}
+
+.sketch {
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: var(--custom-grey);
+}
+
+
+/* MOBILE */
+
 @media screen and (max-width: 1000px) {
   .bio {
     position: relative;
@@ -333,26 +357,14 @@ footer {
   padding: 0.5em;
 }
 
-/* SKETCHBOOK */
+@media screen and (max-width: 700px) {
 
-#sketches {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  .title-wrapper span.subtitle{
+    display: none;
+  }
+
 }
 
-#sketches img,
-#sketches video {
-  width: 100%;
-}
-
-.sketch {
-  margin-bottom: 30px;
-}
-
-.library {
-  color: var(--custom-grey);
-}
 
 @media only screen and (max-device-width: 480px) {
   body {
