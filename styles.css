@@ -19,7 +19,7 @@ body {
   font-family: authentic;
   font-weight: normal;
   font-size: clamp(16px, 1.35vw, 20px);
-  margin: 5px 10px;
+  margin: 20px;
   overflow-y: scroll;
   line-height: 1.35;
 }
@@ -87,7 +87,7 @@ p a:hover {
 
 .bio {
   position: fixed;
-  padding: 0.5em;
+  padding-right: 0.75em;
   padding-bottom: 1.5em;
   max-width: calc(40% - 3em);
   box-sizing: border-box;
@@ -296,6 +296,7 @@ p a:hover {
     position: relative;
     max-width: calc(100vw - 1em);
     height: auto;
+    padding-right: 0;
   }
 
   .work {
@@ -358,11 +359,7 @@ footer {
 @media only screen and (max-device-width: 480px) {
   body {
     font-size: 14px;
-    margin: 7px;
-  }
-
-  .bio {
-    padding: 0;
+    margin: 10px 7px;
   }
 
   p,
