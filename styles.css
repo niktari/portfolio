@@ -99,7 +99,7 @@ p a:hover {
   position: relative;
   left: 40%;
   max-width: calc(60% - 20px);
-  margin-bottom: 0.75em;
+  margin-bottom: 2em;
   overflow-x: hidden;
 }
 
