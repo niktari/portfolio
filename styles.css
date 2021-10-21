@@ -49,8 +49,7 @@ ul {
 }
 
 h1 a,
-p a,
-#under-construction a {
+p a {
   color: var(--custom-black);
   text-decoration: none;
   border-bottom: 2px solid #000;
@@ -65,7 +64,6 @@ p a,
 }
 
 h1 a:hover:not(.ellipses),
-#under-construction a:hover,
 p a:hover {
   color: var(--acccent-color);
   border-bottom: 2px solid var(--acccent-color);
@@ -100,7 +98,6 @@ p a:hover {
 .work {
   position: relative;
   left: 40%;
-  padding: 0.5em;
   max-width: calc(60% - 20px);
   margin-bottom: 0.75em;
   overflow-x: hidden;
@@ -271,10 +268,6 @@ p a:hover {
   display: none;
 }
 
-#under-construction {
-  padding: 0.5em;
-}
-
 /* SKETCHBOOK */
 
 #sketches {
@@ -295,7 +288,6 @@ p a:hover {
 .subtitle {
   color: var(--custom-grey);
 }
-
 
 /* MOBILE */
 
@@ -358,18 +350,19 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-
-  .title-wrapper span.subtitle{
+  .title-wrapper span.subtitle {
     display: none;
   }
-
 }
-
 
 @media only screen and (max-device-width: 480px) {
   body {
     font-size: 14px;
-    margin: 5px 2.5px;
+    margin: 7px;
+  }
+
+  .bio {
+    padding: 0;
   }
 
   p,
