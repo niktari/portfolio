@@ -91,10 +91,9 @@ video {
 
 body {
   background-color: #cecac5;
-  margin: 10px;
+  margin: 10px 20px;
   font-family: din-2014, sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size: 16px;
   color: #282828;
@@ -109,8 +108,16 @@ body {
   position: fixed;
   display: flex;
   width: 72vw;
-  margin-top: 30vh;
-  margin-left: calc(100vw / 2 - 72vw / 2);
+  top: 40vh;
+  left: calc(100vw / 2 - 72vw / 2);
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+label{
+  margin-right: 10px;
 }
 
 .letter {
@@ -120,10 +127,19 @@ body {
   margin: 5px;
 }
 
+.cell {
+  background-color: #ec4513;
+}
+
+.reverse-cell {
+  background-color: #cecac5;
+}
+
 /* INPUTS */
 
 #controls {
-  width: 100%;
+  width: calc(100% - 20px);
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -131,8 +147,8 @@ body {
 input[type="range"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 300px;
-  height: 3px;
+  width: 200px;
+  height: 5px;
   background-color: #f1f1f1;
   border-radius: 1px;
   outline: none;
@@ -143,23 +159,38 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+input[type="range"]:hover{
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="range"]:active{
+  opacity: 1;
 }
 
 input[type="button"] {
   background-color: #f1f1f1;
   border: none;
   color: #1d1d1d;
-  padding: 10px;
+  width: 180px;
+  padding: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: din-2014, sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover{
+  opacity: 0.7;
+  transition: 0.5s ease-in-out;
 }
 
 /* LETTER W */
@@ -172,15 +203,12 @@ input[type="button"] {
 .letter.w .blank {
   width: 4.16%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.w .cell {
   width: 4.16%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER H */
@@ -193,15 +221,12 @@ input[type="button"] {
 .letter.h .blank {
   width: 10%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.h .cell {
   width: 10%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER I */
@@ -214,15 +239,12 @@ input[type="button"] {
 .letter.i .blank {
   width: 25%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.i .cell {
   width: 25%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER T */
@@ -235,15 +257,12 @@ input[type="button"] {
 .letter.t .blank {
   width: 16.67%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.t .cell {
   width: 16.67%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER E */
@@ -256,15 +275,12 @@ input[type="button"] {
 .letter.e .blank {
   width: 11%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.e .cell {
   width: 11%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER C */
@@ -277,15 +293,12 @@ input[type="button"] {
 .letter.c .blank {
   width: 11%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.c .cell {
   width: 11%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER A */
@@ -299,15 +312,12 @@ input[type="button"] {
 .letter.a .blank {
   width: 10%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.a .cell {
   width: 10%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER P */
@@ -321,15 +331,12 @@ input[type="button"] {
 .letter.p .blank {
   width: 9.09%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.p .cell {
   width: 9.09%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* LETTER L */
@@ -342,15 +349,12 @@ input[type="button"] {
 .letter.l .blank {
   width: 20%;
   height: 5.88%;
-  background-color: yellow;
-  border-radius: 50%;
   opacity: 0;
 }
 
 .letter.l .cell {
   width: 20%;
   height: 5.88%;
-  background-color: #ec4513;
 }
 
 /* MOBILE */
