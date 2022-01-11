@@ -11,6 +11,8 @@
     <title>Sketchbook | Nikki (Niktari) Makagiansar</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,121 +22,180 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div class="bio">
+    <nav id="parent">
+        <div id="navbar">
 
-        <h1><a class="main" href="../">Nikki (Niktari) Makagiansar</a></h1>
+            <h1><a href="index.html">Nikki (Niktari) Makagiansar</a></h1>
 
-        <h1>These are some explorations of creating art with code, using Javascript libraries such as <a
-                href="https://p5js.org/" target="_blank">p5.js</a>, <a href="https://paperjs.org/"
-                target="_blank">paper.js</a>, and <a href="https://openscad.org/" target="_blank">OpenSCAD</a>. Some
-            sketches took twenty minutes, others took three days (especially for the 3D experiments). The full code for
-            each sketch will be shared soon!</h1>
-
-    </div>
-
-    <div class="work" id="sketches">
-
-
-
-        <div class="sketch">
-
-            <img src="images/sketch_wheat.gif">
-
-            <div class="title-wrapper">
-
-                <h2>Wheat Studies</h2>
-
-                <div class="subtitle">
-                    <p>p5.js</p>
-                </div>
-
-            </div>
+            <ul id="ul-nav">
+                <li><a href="sketchbook.html">Sketchbook</a></li>
+                <li><a href="mailto:nmakagiansar@gmail.com">Contact</a></li>
+                <li><a href="info" onclick="show_info()">Info</a></li>
+            </ul>
 
         </div>
 
+    </nav>
+
+    <div class="sketches">
+
         <div class="sketch">
 
-            <img src="images/sketch_moire.gif">
-
             <div class="title-wrapper">
-
                 <h2>Moiré</h2>
 
-                <div class="subtitle">
-                    <p>paper.js</p>
-                </div>
+                <h2>Code (paper.js)</h2>
 
             </div>
 
+            <div class="sketch-img"><img src="sketchbook-images/moire.gif"></div>
+
+            <p>Computationally-generated shapes made up of tiny dashes with varying stroke widths, resulting
+                in a <a href="https://en.wikipedia.org/wiki/Moir%C3%A9_pattern" target="_blank">moiré pattern</a>.</p>
+
         </div>
 
-
         <div class="sketch">
-
-            <img src="images/sketch_martens.gif">
 
             <div class="title-wrapper">
 
-                <h2>Martens Type</h2>
+                <h2>Knitting Type</h2>
 
-                <div class="subtitle">
-                    <p>paper.js</p>
-                </div>
+                <h2>Needles & Yarn</h2>
 
             </div>
 
-        </div>
+            <div class="sketch-img"><img src="sketchbook-images/letter-a.jpg"></div>
 
-
-        <div class="sketch">
-
-            <video autoplay muted loop playsinline>
-                <source src="images/sketch_fungal.mp4" type="video/mp4">
-            </video>
-
-            <div class="title-wrapper">
-
-                <h2>Fungal Fortress</h2>
-
-                <div class="subtitle">
-                    <p>OpenSCAD</p>
-                </div>
-
-            </div>
+            <p>The letter A based off of <a href="https://sharptype.co/typefaces/ogg-superfamily/ogg/"
+                    target="_blank">Sharp Type's Ogg</a>, but tediously knitted using a colorwork technique called
+                intarsia.</p>
 
         </div>
 
-
         <div class="sketch">
-
-            <img src="images/sketch_noisey.png">
 
             <div class="title-wrapper">
 
                 <h2>Noisey Topography</h2>
 
-                <div class="subtitle">
-                    <p>p5.js</p>
-                </div>
+                <h2>Code (p5.js)</h2>
+
+            </div>
+
+            <div class="sketch-img"><img src="sketchbook-images/noisey.png"></div>
+
+            <p>Experimentation with Perlin noise and color mapping, which ultimately resembled an aerial view of a rice
+                terrace.</p>
+
+        </div>
+
+        <div class="sketch">
+
+            <div class="title-wrapper">
+
+                <h2>Tegamitype Anniversary</h2>
+
+                <h2>Code (p5.js)</h2>
+
+            </div>
+
+            <div class="sketch-img">
+                <video autoplay muted loop playsinline>
+                    <source src="sketchbook-images/tg-anni.mp4" type="video/mp4">
+                </video>
+
+                <p>A dynamic, computationally-generated number 4 to celebrate <a href="https://tegamitype.com/"
+                        target="_blank">Tegamitype Foundry</a>'s four-year
+                    anniversary.</p>
 
             </div>
 
         </div>
 
-
         <div class="sketch">
-
-            <img src="images/sketch_yarn.gif">
 
             <div class="title-wrapper">
 
-                <h2>Random Yarn</h2>
+                <h2>Wheat Studies</h2>
 
-                <div class="subtitle">
-                    <p>p5.js</p>
-                </div>
+                <h2>Code (p5.js)</h2>
 
             </div>
+
+            <div class="sketch-img"><img src="sketchbook-images/wheat.gif"></div>
+
+            <p>An attempt at making the most hyper-realistic image using code, which in this case, was bushels of wheat.
+            </p>
+
+        </div>
+
+        <div class="sketch">
+
+            <div class="title-wrapper">
+
+                <h2>Leave</h2>
+
+                <h2>Code (p5.js)</h2>
+
+            </div>
+
+            <div class="sketch-img">
+                <video autoplay muted loop playsinline>
+                    <source src="sketchbook-images/leave.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+            <p>Testing out interactive steering behaviors through typography and particles.</p>
+
+        </div>
+
+        <div class="sketch">
+
+            <div class="title-wrapper">
+
+                <h2>Martens Type</h2>
+
+                <h2>Code (paper.js)</h2>
+
+            </div>
+
+            <div class="sketch-img"><img src="sketchbook-images/martens.gif"></div>
+
+            <p>Recreating Karel Marten's <a
+                    href="https://assets-maharam-prod.s3.amazonaws.com/images/designer_images/original/115/m_collab_martens_03.jpg?1461094322"
+                    target="_blank">modular type system</a> with code (but obviously only got up to one word).
+            </p>
+        </div>
+
+        <div class="sketch">
+
+            <div class="title-wrapper">
+
+                <h2>Type Design</h2>
+
+                <h2>Glyphs App</h2>
+            </div>
+
+            <div class="sketch-img"><img src="sketchbook-images/awake.png"></div>
+
+            <p>A novice stab at type design. A super condensed display typeface with exaggerated and sharp serifs.</p>
+
+        </div>
+
+        <div class="sketch">
+
+            <div class="title-wrapper">
+                <h2>Random Yarn</h2>
+
+                <h2>Code (p5.js)</h2>
+            </div>
+
+            <div class="sketch-img"><img src="sketchbook-images/yarn.gif"></div>
+
+            <p>Balls of yarn that were computationally-generated by randomizing the rotation and opacity of each circle.
+            </p>
 
         </div>
 
@@ -142,7 +203,74 @@
 
     </div>
 
-    <script src="" async defer></script>
+
+    </div>
+
+
+    <button id="top-button"> Top </button>
+
+    <div id="info-overlay">
+
+        <div class="work">
+            <div id="info-about">
+                <h3>About</h3>
+                <p>Nikki (Niktari) Makagiansar is a designer who likes to code based in Brooklyn, New York. She
+                    enjoys
+                    combining motion, print, code, and typography to create
+                    bespoke visual systems and generative identities.</p>
+                <p> Nikki is a recent graduate of Parsons School of Design, where she was also a research assistant
+                    for
+                    the Design & Technology director, Justin Bakse.
+                </p>
+
+                <p>She is also a co-founder of SPICY, a grassroots arts
+                    and publishing organization for and by queer and trans people of
+                    color. Prior to pursuing a design practice, she was part of the brand marketing team at Comedy
+                    Central.
+                </p>
+            </div>
+
+            <div id="info-second">
+                <div id="info-status">
+                    <h3>Currently</h3>
+                    <p span id="status">Available for Freelance</p>
+                </div>
+
+                <div id="info-connect">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="mailto:nmakagiansar@gmail.com">Email <span class="ext-link">→</span></a></li>
+                        <li><a href="https://www.are.na/nikki-makagiansar" target="_blank">Are.na <span
+                                    class="ext-link">→</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/nikkimakagiansar/" target="_blank">LinkedIn <span
+                                    class="ext-link">→</span></a></li>
+                    </ul>
+                </div>
+
+                <div id="info-connect">
+                    <h3>Colophon</h3>
+
+                    <h4 class="h4-first">Site Design & Development</h4>
+                    <p>Nikki Makagiansar</p>
+
+                    <h4>Typeface</h4>
+                    <ul>
+                        <li><a href="https://authentic.website/sans">Authentic Sans</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div id="close-button" onclick=hide_info()>+</div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="main.js" async defer></script>
 </body>
 
 </html>
