@@ -149,6 +149,7 @@ hr{
   
   .one-up img, .one-up video {
     width: 100%;
+    margin-bottom: 18px;
   }
 
   .swiper-button-prev{
@@ -361,6 +362,10 @@ hr{
 
 .one-up {
   grid-column: 1/11; 
+}
+
+.one-up img, .one-up video {
+  margin-bottom: 16px;
 }
 
 .swiper-button-prev, .swiper-button-next{
