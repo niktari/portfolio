@@ -180,6 +180,7 @@ hr{
   border-radius: 80px;
   background-color: var(--acccent-color);
   font-size: 18px;
+  color: var(--custom-black);
   border: none;
   z-index: 100;
   cursor: pointer;
@@ -298,16 +299,20 @@ h3{
 
 .sketch {
   width: calc(50% - 40px);
-  padding: 14px;
 }
 
 }
 
 @media only screen and (max-width: 768px) {
   body {
-    margin: 14px 14px 100px 14px;
-    font-size: 14px;
+    margin: 16px 16px 100px 16px;
+    font-size: 16px;
+    
   }
+
+  ul#ul-nav li{
+    margin-left: 12px;
+} 
 
   .work h2.title{
     grid-column: 1 / 11;
@@ -335,22 +340,22 @@ h3{
 
 nav#parent{
   width: calc(100vw - 28px);
-  padding: 14px;
+  padding: 16px;
 
 }
 
 hr{
-  margin-left: -14px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-left: -16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .work{
-  grid-gap: 14px 14px;
+  grid-gap: 16px 16px;
 }
 
 .work-first, .sketches{
-  margin-top: calc(14px * 4.35);
+  margin-top: calc(16px * 4.35);
 }
 
 .one-up {
@@ -369,26 +374,26 @@ hr{
 
 
 .sketches {
-  max-width: calc(100vw - 14px);
-  row-gap: 14px;
+  max-width: calc(100vw - 16px);
+  row-gap: 16px;
 }
 
 .sketch {
   width: calc(100% - 28px);
-  padding: 14px;
+  padding: 16px;
 }
 
 .title-wrapper{
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .sketch p {
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 #info-overlay {
   width: calc(100% - 28px);
-  padding: 14px;
+  padding: 16px;
 }
 
 #info-about{
@@ -399,13 +404,13 @@ hr{
   grid-column: 1/11;
 }
 
-#info-education, #info-connect{
+ #info-connect{
   margin-top: 19px;
 }
 
 div#close-button{
   top: 5px;
-  right: 14px;
+  right: 16px;
   font-size: 28px;
 }
 
@@ -429,5 +434,10 @@ p{
 #info-about p:last-of-type{
   margin-bottom: 5px;
 }
+
+#top-button{
+  font-size: 16px;
+}
+
 
 }
