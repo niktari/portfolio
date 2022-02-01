@@ -39,9 +39,19 @@ a {
     text-decoration: none;
 }
 
+a:not(nav a){
+  border-bottom: 1px dotted var(--custom-black);
+}
+
 a:hover{
     color: #262f2e80;
 }
+
+
+a:hover:not(nav a){
+  border-bottom-color: #262f2e80;
+}
+
 
 nav#parent{
   position: fixed;
