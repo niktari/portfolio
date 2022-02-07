@@ -107,9 +107,9 @@ body {
 .container {
   position: fixed;
   display: flex;
-  width: 72vw;
+  width: 95vw;
   top: 40vh;
-  left: calc(100vw / 2 - 72vw / 2);
+  left: calc(100vw / 2 - 95vw / 2);
 }
 
 h1{
@@ -124,7 +124,7 @@ label{
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  margin: 5px;
+  margin: 3px;
 }
 
 .cell {
@@ -133,6 +133,10 @@ label{
 
 .reverse-cell {
   background-color: #cecac5;
+}
+
+.blank {
+  border-radius: 25px;
 }
 
 /* INPUTS */
@@ -196,165 +200,127 @@ input[type="button"]:hover{
 /* LETTER W */
 
 .letter.w {
-  width: 14vw;
-  height: 11vw;
+  width: 16vw;
+  height: 10vw;
 }
 
 .letter.w .blank {
   width: 4.16%;
-  height: 5.88%;
-  opacity: 0;
+  height: 6.5%;
 }
 
 .letter.w .cell {
   width: 4.16%;
-  height: 5.88%;
+  height: 6.5%; /* 6.2 */
 }
 
 /* LETTER H */
 
 .letter.h {
-  width: 6vw;
-  height: 11vw;
+  width: 9vw;
+  height: 10vw;
 }
 
 .letter.h .blank {
-  width: 10%;
-  height: 5.88%;
-  opacity: 0;
+  width: 7.14%;
+  height: 6.5%;
 }
 
 .letter.h .cell {
-  width: 10%;
-  height: 5.88%;
+  width: 7.14%;
+  height: 6.5%;
 }
 
 /* LETTER I */
 
 .letter.i {
-  width: 2.5vw;
-  height: 11vw;
+  width: 2.7vw;
+  height: 10vw;
+  margin-left: 7px;
 }
 
 .letter.i .blank {
   width: 25%;
-  height: 5.88%;
-  opacity: 0;
+  height: 6.5%;
 }
 
 .letter.i .cell {
   width: 25%;
-  height: 5.88%;
+  height: 6.5%;
 }
 
-/* LETTER T */
+/* LETTER T, C */
 
-.letter.t {
-  width: 3.6vw;
-  height: 11vw;
+.letter.t, .letter.c {
+  width: 9vw;
+  height: 10vw;
 }
 
-.letter.t .blank {
-  width: 16.67%;
-  height: 5.88%;
-  opacity: 0;
+.letter.t .blank, .letter.c .blank {
+  width: 7.14%;
+  height: 6.5%;
 }
 
-.letter.t .cell {
-  width: 16.67%;
-  height: 5.88%;
+.letter.t .cell, .letter.c .cell {
+  width: 7.14%;
+  height: 6.5%;
 }
 
-/* LETTER E */
-
-.letter.e {
-  width: 5.5vw;
-  height: 11vw;
+.letter.c{
+  /* background-color: blue; */
+  margin-left: -3px;
 }
 
-.letter.e .blank {
-  width: 11%;
-  height: 5.88%;
-  opacity: 0;
-}
+/* LETTER E, P */
 
-.letter.e .cell {
-  width: 11%;
-  height: 5.88%;
-}
-
-/* LETTER C */
-
-.letter.c {
-  width: 5.5vw;
-  height: 11vw;
-}
-
-.letter.c .blank {
-  width: 11%;
-  height: 5.88%;
-  opacity: 0;
-}
-
-.letter.c .cell {
-  width: 11%;
-  height: 5.88%;
-}
-
-/* LETTER A */
-
-.letter.a {
-  width: 5.7vw;
-  height: 11vw;
-  margin-right: 1px;
-}
-
-.letter.a .blank {
-  width: 10%;
-  height: 5.88%;
-  opacity: 0;
-}
-
-.letter.a .cell {
-  width: 10%;
-  height: 5.88%;
-}
-
-/* LETTER P */
-
-.letter.p {
+.letter.e, .letter.p{
   width: 6.5vw;
-  height: 11vw;
-  margin-left: 1px;
+  height: 10vw;
 }
 
-.letter.p .blank {
-  width: 9.09%;
-  height: 5.88%;
-  opacity: 0;
+.letter.e .blank, .letter.p .blank {
+  width: 10%;
+  height: 6.5%;
 }
 
-.letter.p .cell {
-  width: 9.09%;
-  height: 5.88%;
+.letter.e .cell, .letter.p .cell {
+  width: 10%;
+  height: 6.5%;
 }
 
 /* LETTER L */
 
 .letter.l {
-  width: 3.2vw;
-  height: 11vw;
+  width: 7.5vw;
+  height: 10vw;
 }
 
 .letter.l .blank {
-  width: 20%;
-  height: 5.88%;
-  opacity: 0;
+  width: 8.32%;
+  height: 6.5%;
 }
 
 .letter.l .cell {
-  width: 20%;
-  height: 5.88%;
+  width: 8.32%;
+  height: 6.5%;
+}
+
+
+/* LETTER A */
+
+.letter.a {
+  width: 12vw;
+  height: 10vw;
+}
+
+.letter.a .blank {
+  width: 5%;
+  height: 6%.5;
+}
+
+.letter.a .cell {
+  width: 5%;
+  height: 6.5%;
 }
 
 /* MOBILE */
