@@ -286,6 +286,7 @@ h1 {
     height: 100%;
     overflow-y: scroll;
     padding-top: 4rem;
+    background-color: hsl(80, 4%, 69%);
 }
 
 .info--column h4 {
