@@ -1,5 +1,5 @@
 // COLORS
-let colors = ['rgb(95, 100, 231)', 'rgb(72, 182, 142)', 'rgb(227, 88, 58)', 'rgb(229, 177, 42)', 'rgb(118, 101, 105)']
+let colors = ['rgb(255, 73, 1)', 'rgb(2, 119, 199)', 'rgb(170, 203, 223)', 'rgb(220, 227, 250)', 'rgb(136, 185, 180)']
 
 // HIGHLIGHT
 window.onmousedown = () => {

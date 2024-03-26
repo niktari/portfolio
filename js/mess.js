@@ -1,225 +1,156 @@
-let srcLayer;
-let maskLayer;
-let textureLayer;
-let maskLayerTexture;
+let palette = ['#88B9B4', '#AACCDF', '#DCE3FA', '#0277C7', '#FF4901'];
 
-let graphicSize = 400;
+let elements = document.querySelectorAll('.effect');
 
-let semicircleFirst = document.querySelectorAll('.semicircle.first');
-let semicircleSecond = document.querySelectorAll('.semicircle.second');
+elements.forEach((element) => {
 
-let firstColor, secondColor;
+  let content = element.textContent;
+  let words = content.split(' ');
 
-let prevMouseX;
-let prevMouseY;
+  let wordWrapper = '';
 
-let targetX;
-let targetY;
+  wordWrapper = words.map(word => `<div class="effect--div">${word}</div>`).join(' ');
 
-let delayFactor = 0.05; 
+  element.innerHTML = wordWrapper;
 
+  let divs = document.querySelectorAll('.effect--div')
 
-function setup() {
+  divs.forEach((div) => {
+    let text = div.innerText;
+    let spanWrapper = '';
 
-  const c = createCanvas(windowWidth, windowWidth);
-  mess(c);
-//   mess_resize();
-  pixelDensity(1);
-
-  srcLayer = createGraphics(graphicSize, graphicSize);
-  maskLayer = createGraphics(graphicSize, graphicSize);
-  textureLayer = createGraphics(graphicSize, graphicSize);
-  maskLayerTexture = createGraphics(graphicSize, graphicSize);
-
-      let random_color_index = floor(random(0, circles.length));
-
-      firstColor = getComputedStyle(semicircleFirst[random_color_index]).backgroundColor;
-      secondColor = getComputedStyle(semicircleSecond[random_color_index]).backgroundColor;
-
-}
-
-function draw() {
-
-  clear();
-
-
-
-  drawSrcLayer();
-  
-  let maskedImg = srcLayer.get();
-
-  let textureImg = textureLayer.get();
-
-  targetX = lerp(targetX, mouseX, delayFactor);
-  targetY = lerp(targetY, mouseY, delayFactor);
-
-  let maxMoveDistance = 2; 
-
-  let dx = targetX - mouseX;
-  let dy = targetY - mouseY;
-
-  // Apply linear interpolation to smoothly move the graphic towards the target
-  if (abs(dx) > maxMoveDistance) {
-    targetX -= maxMoveDistance * sign(dx);
-  } else {
-    targetX = mouseX;
-  }
-
-  if (abs(dy) > maxMoveDistance) {
-    targetY -= maxMoveDistance * sign(dy);
-  } else {
-    targetY = mouseY;
-  }
-
-
-    // Update the previous mouse positions
-    prevMouseX = mouseX;
-    prevMouseY = mouseY; 
-   
-  
-  
-  for (let i = 0; i < 30; i++) {
-    
-    drawMaskLayer(i);
-    
-    maskedImg.mask(maskLayer);
-    
-    
-    push();
-    translate(targetX, targetY); 
-    rotate(5 * noise(frameCount/100 + 1 * i * 0.01));
-    image(maskedImg, -graphicSize/2, -graphicSize/2);
-    pop();
-  }
-
-  push();
-  imageMode(CENTER);
-  translate(targetX, targetY);
-  drawMaskLayerTexture();
-  textureImg.mask(maskLayerTexture);
-  drawTexture();
-  image(textureImg, 0, 0);
-  pop();
-
-
-}
-
-
-// Get the sign of a number
-function sign(val) {
-  return val >= 0 ? 1 : -1;
-}
-
-function drawSrcLayer() {
-
-    let document_body = getComputedStyle(document.body).backgroundColor;
-
-if(document_body ==='rgb(35, 31, 32)'){
-    srcLayer.background('rgb(35, 31, 32)');
-} else {
-    srcLayer.background('rgb(235, 237, 231)');
-}
-
-  srcLayer.noStroke();
-
-  let points = 16;
-  let pointAngle = 360 / points;
-  let radius = graphicSize;
-  
-  for (let angle = 0; angle < 360; angle += pointAngle) {
-    let mappedX = map(mouseX, 0, windowWidth, -graphicSize, graphicSize, true);
-    let mappedY = map(mouseY, 0, windowHeight, -graphicSize, graphicSize, true);
-    
-    let x = cos(radians(angle)) * radius;
-    let y = sin(radians(angle)) * radius;
-
-    srcLayer.push();
-    srcLayer.translate(graphicSize/2, graphicSize/2);
-
-    if (angle <= 180) {
-
-      srcLayer.fill(firstColor);
-
-    } else {
-      srcLayer.fill(secondColor);
+    for (let i = 0; i < text.length; i++) {
+      spanWrapper += `<span class="effect--span">${text.charAt(i)}</span>`;
+      div.innerHTML = spanWrapper;
     }
 
-    for(let i = 0; i < circles.length; i++){
+  })
 
-      circles[i].onclick = function() { 
-        firstColor = getComputedStyle(semicircleFirst[i]).backgroundColor;
-        secondColor = getComputedStyle(semicircleSecond[i]).backgroundColor;
-      }
+})
 
-    }
+let spans = document.querySelectorAll('.effect--span');
+let spanElements = Array.from(spans);
 
-    srcLayer.triangle(mappedX, mappedY, x, y, x + graphicSize/(graphicSize/10) * 10, y + graphicSize/(graphicSize/10) * 10);
-    srcLayer.pop();
-  }
-}
+// EFFECTS
 
-function drawMaskLayer(i) {
-  maskLayer.clear();
-  maskLayer.noStroke();
-  maskLayer.ellipse(graphicSize/2, graphicSize/2, graphicSize - (i * graphicSize/30));
-}
-
-function drawMaskLayerTexture() {
-    maskLayerTexture.clear();
-    maskLayerTexture.noStroke();
-    maskLayerTexture.ellipse(graphicSize/2, graphicSize/2, graphicSize);
-  }
-
-
-function drawTexture() {
-  textureLayer.clear();
-  textureLayer.noStroke();
+function addEffects() {
+    document.onmousemove = function (e) {
   
-  for (let i = 0; i <= graphicSize; i += 5) {
-    for (let j = 0; j <= graphicSize; j+=5) {
-			textureLayer.stroke(255,255,255);
-			textureLayer.point(i, j);
+        spanElements.forEach((spanElement, index) => {
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;
+        
+        let centerX = window.innerWidth / 2;
+        let centerY = window.innerHeight /2;
+        
+        let distFromCenter = distance(centerX, centerY, mouseX, mouseY)
+        
+        let maxDist = distance(centerX, centerY, window.innerWidth, window.innerHeight)
+        
+        let mappedEffect = map(distFromCenter, 0, maxDist, 30, 0);
           
-	}
-}
-  
+        let mappedRotation = map(distFromCenter, 0, maxDist, Math.random() * 90 - 45, 0);
+
+         
+        spanElement.style.top = mappedEffect * -Math.sin((index * .01) * 20 * Math.PI) + "px";
+        spanElement.style.transform = `rotate(${Math.random() * mappedRotation}deg)`;
+          
+      
+        })
+      }
 }
 
-function mess(c, wait_ms = 1000) {
-    c.canvas.classList.add("mess");
-    c.canvas.classList.add("hide");
-    setTimeout(show, 1);
-    c.canvas.setAttribute("style", "");
-  
-    // fade the canvas out when mouse is still
-    let hide_timeout = null;
-  
-    function show() {
-      c.canvas.classList.remove("hide");
-      hide_timeout && clearTimeout(hide_timeout);
-      hide_timeout = setTimeout(hide, wait_ms);
-  
-      if (window.mess_show) mess_show();
+function removeEffects() {
+
+    document.onmousemove = function (e) {
+    spanElements.forEach((spanElement) => {
+        spanElement.style.top = 0;
+
+        // I kinda like how the letters keep the rotation when they go back to their normal position!
+        // spanElement.style.transform = "rotate(0deg)";
+})
     }
-  
-    function hide() {
-      c.canvas.classList.add("hide");
-  
-      if (window.mess_hide) mess_hide();
+}
+
+let effectsSwitch = document.getElementById("params--effect");
+
+effectsSwitch.checked ? addEffects() : removeEffects();
+
+effectsSwitch.onchange = () => {
+    effectsSwitch.checked ? addEffects() : removeEffects();
+};
+
+
+
+
+
+// COLORS
+function addColors() {
+    spanElements.forEach((spanElement) => {
+      
+    spanElement.style.backgroundColor = palette[Math.floor(Math.random() * palette.length)]
+      
+      
+      
+    })
+    
     }
-  
-    window.addEventListener("mousemove", () => {
-      show();
-    });
-  
-    // resize canvas
-    window.addEventListener("resize", () => {
-      resizeCanvas(windowWidth, windowHeight);
-      c.canvas.setAttribute("style", "");
-  
-      if (window.mess_resize) mess_resize();
-    });
-  }
+    
+    function removeColors() {
+        spanElements.forEach((spanElement) => {
+        spanElement.style.backgroundColor = "transparent";
+    })
+    }
+    
+    
+    let colorsSwitch = document.getElementById("params--colors");
+    
+    colorsSwitch.checked ? addColors() : removeColors();
+    
+    colorsSwitch.onchange = () => {
+        colorsSwitch.checked ? addColors() : removeColors();
+    };
+
+
+
+
+
+
+// NUMBERS
+
+function addNumbers() {
+    spanElements.forEach((spanElement, index) => {
+        spanElement.innerHTML += `<sub class="span--index">${index + 1}</sub>`;
+    })
+    document.documentElement.style.setProperty("--about-max-width", "100%");
+}
+
+function removeNumbers() {
+
+        let spanIndices = document.querySelectorAll(".span--index")
+        for(let spanIndex of spanIndices) {
+            spanIndex.style.display = "none";
+        }
+        document.documentElement.style.setProperty("--about-max-width", "900px");
+}
+
+let numbersSwitch = document.getElementById("params--numbers");
+    
+    numbersSwitch.checked ? addNumbers() : removeNumbers();
+    
+    numbersSwitch.onchange = () => {
+        numbersSwitch.checked ? addNumbers() : removeNumbers();
+    };
+
+
+
+function map(value, low1, high1, low2, high2) {
+  return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
+function distance(x1,y1,x2,y2){
+  return Math.sqrt( Math.pow((x1-x2), 2) + Math.pow((y1-y2), 2) );
+}
 
 
 
