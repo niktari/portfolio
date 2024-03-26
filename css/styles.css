@@ -565,13 +565,10 @@ label:hover {
         justify-content: space-between;
     }
 
-    #nav--projects, #nav--sandbox {
-        display: none;
-    }
-
-    #nav--top {
+    #nav--projects, #nav--sandbox, #nav--top  {
         display: none!important;
     }
+
   }
 
   @media screen and (max-width: 425px) {
