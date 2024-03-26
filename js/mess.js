@@ -76,11 +76,6 @@ let effectsSwitch = document.getElementById("params--effect");
 
 effectsSwitch.checked ? addEffects() : removeEffects();
 
-effectsSwitch.onchange = () => {
-    effectsSwitch.checked ? addEffects() : removeEffects();
-};
-
-
 
 
 

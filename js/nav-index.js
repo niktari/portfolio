@@ -50,6 +50,8 @@ if (deviceWidth <= 425) {
 } 
 
 effectsSwitch.onchange = () => {
+    effectsSwitch.checked ? addEffects() : removeEffects();
+    
    if(!effectsSwitch.checked) {
         effectsMessage.style.display = "none";
     } else if (deviceWidth <= 425 && effectsSwitch.checked) {
