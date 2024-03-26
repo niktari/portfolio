@@ -331,7 +331,7 @@ h1 {
     gap: 1rem;
 }
 
-.sandbox--info {
+.project--description, .sandbox--info {
     margin-bottom: 1rem;
 }
 
