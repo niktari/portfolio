@@ -37,3 +37,22 @@ window.onscroll = () => {
         }
 
 }
+
+
+// MOBILE
+
+let deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+let effectsMessage = document.getElementById("params--effect-mobile");
+
+
+if (deviceWidth <= 425) {
+    effectsMessage.style.display = "inline";
+} 
+
+effectsSwitch.onchange = () => {
+   if(!effectsSwitch.checked) {
+        effectsMessage.style.display = "none";
+    } else if (deviceWidth <= 425 && effectsSwitch.checked) {
+        effectsMessage.style.display = "inline";
+    }
+}
