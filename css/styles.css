@@ -36,6 +36,8 @@
     --font-size-large: 1.82rem;
     /* clamp(24px, 2.75vw, 50px) */
 
+    --border: 1px solid var(--white);
+
     --highlight-color: null;
 
     --about-max-width: 900px;
@@ -523,6 +525,10 @@ margin-bottom: 0.5rem;
     letter-spacing: 0;
     font-weight: bold;
   }
+
+.border {
+    border: var(--border);
+}
 
   /* MEDIA QUERIES */
 
