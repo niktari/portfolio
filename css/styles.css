@@ -437,36 +437,43 @@ label:hover {
     color: var(--black-30);
 }
 
+figcaption {
+    margin-bottom: 1rem;
+    color: var(--black-30);
+    width: 600px;
+    max-width: 100%;
+}
 
-  .project--wrapper-info {
-    position: sticky;
-    top: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    /* background-color: red; */
-    align-self: start;
-  }
 
-  .project--wrapper-image {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+.project--wrapper-info {
+position: sticky;
+top: 4rem;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+/* background-color: red; */
+align-self: start;
+}
 
-  .project--wrapper-image img {
-    width: 100%;
-  }
+.project--wrapper-image {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
 
-  .project--wrapper-credits {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+.project--wrapper-image img {
+width: 100%;
+}
 
-  .project--wrapper-credits h4 {
-    margin-bottom: 0.5rem;
-  }
+.project--wrapper-credits {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.project--wrapper-credits h4 {
+margin-bottom: 0.5rem;
+}
 
 
 
