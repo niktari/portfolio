@@ -403,6 +403,11 @@ label:hover {
 
 .project--description-headline {
     margin-bottom: 0.5rem;
+    transition: color 0.3s linear;
+}
+
+.project--description-headline a {
+    transition: color 0.3s linear;
 }
 
 .project--description-text p:not(.project--description-text p:last-of-type) {
@@ -426,6 +431,12 @@ label:hover {
     color: var(--black-30);
     transition: color 0.3s linear;
 }
+
+#description-button:checked ~ .project--description-headline a {
+    margin-bottom: 1rem;
+    color: var(--black-30);
+}
+
 
   .project--wrapper-info {
     position: sticky;
