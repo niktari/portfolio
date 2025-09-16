@@ -440,6 +440,7 @@ label:hover {
 }
 
 figcaption {
+    margin-top: -0.5rem;
     margin-bottom: 1rem;
     color: var(--black-30);
     width: 600px;
@@ -477,7 +478,14 @@ gap: 1rem;
 margin-bottom: 0.5rem;
 }
 
+.two-up {
+    display: flex;
+    gap: 1rem;
+}
 
+.two-up * {
+    width: calc(50% - 0.5rem);
+}
 
 /* UTILITY: BADGE */
 .badge {
@@ -591,6 +599,14 @@ margin-bottom: 0.5rem;
 
     #nav--projects, #nav--sandbox, #nav--top  {
         display: none!important;
+    }
+
+    .two-up {
+        flex-direction: column;
+    }
+
+    .two-up * {
+        width: 100%;
     }
 
   }
